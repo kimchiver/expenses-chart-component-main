@@ -179,6 +179,7 @@ section {
     transform: scaleY(0);
   }
   to{
+    transform: scaleY(100%);
     background-color: var(--cyan);
   }
 }

@@ -21,14 +21,13 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/profile/kimchiver)
-- Live Site URL: [Add live site URL here](https://kimchiver.github.io/)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/expenses-chart-component-main)
+- Live Site URL: [Github Pages](https://kimchiver.github.io/expenses-chart-component-main)
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- JQuery
+- HTML5, CSS
+- JQuery 3.7.1
 
 
 ## Author

@@ -118,11 +118,11 @@ section {
   color: var(--very-pale-orange);
   background: var(--dark-brown);
   position: absolute;
-  left: -4px;
+  left: -8px;
   z-index: 2;
   opacity: 0;
-  width: 56px;
-  padding: 8px 4px;
+  width: 64px;
+  padding: 8px 2px;
   border-radius: 4px;
   white-space: nowrap;
   line-height: initial;

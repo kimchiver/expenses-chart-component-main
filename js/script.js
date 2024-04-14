@@ -1,33 +1,35 @@
-//jshint esversion:8
+//jshint esversion:9
+const week = { 0: "sun", 1: "mon", 2: "tue", 3: "wed", 4: "thu", 5: "fri", 6: "sat" };
 
-const jsonstr = $.getJSON("https://kimchiver.github.io/fem-expenses-chart-component-main/data.json")
+$(document).ready( function() {
+  $.getJSON('data.json')
   .done(function(json) {
     const obj = [...json];
     var max = 0;
-    obj.forEach((fee) => {
-      max = (max < fee.amount) ? fee.amount : max;
-    });
+    obj.forEach( fee => { max = (max < fee.amount) ? fee.amount : max; });
     if (obj.length) createChart(obj, max);
 
   })
   .fail(function(jqxhr, err) {
     console.log("Request Failed: " + err);
   });
+});
 
-
-function createChart(feesList, maximum) {
-  $('.set > div').each(function(i) {
-    if (i < feesList.length) {
-      const amount = feesList[i].amount;
-      const classList = (amount === maximum) ? 'bar lit' : 'bar';
-      $(this).append($('<h4>').text(`$ ${amount}`).addClass('popup').css('top', `${150*(1-amount/maximum)}px`))
-        .append($('<div>').addClass('bar-wrap')
-          .append($('<div>').addClass(classList).css('height', `${amount/(maximum*0.01)}%`)))
-        .append($('<div>').text(`${feesList[i].day}`));
-
-    }
+function createChart(fees, maximum) {
+  const today = week[new Date().getDay()];
+  fees.forEach( fee => {
+    $('.set').append(
+                `<div class="col ${fee.day}">` +
+                `<h4 class="amount" style="top:${150*(1-fee.amount/maximum)}px">$ ${fee.amount}</h4>` +
+                `<div class="bar-wrap">` +
+                `<div class="bar ${(fee.day === today) ? 'lit' : ''}"></div>` +
+                `</div>` +
+                `<div>${fee.day}</div>` +
+                `</div>`
+              );
+    $(`.${fee.day} .bar`).css('height', `${fee.amount/(maximum*0.01)}%`);
   });
 }
 
 
-// $( createChart() );
+//*----                           2023 © kmichiver                              -----*

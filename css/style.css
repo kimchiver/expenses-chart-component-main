@@ -82,6 +82,7 @@ section {
   justify-content: space-between;
   align-items: flex-end;
   margin: 1.5rem auto;
+  margin-bottom: 1rem;
   font-size: 0.9rem;
   line-height: 2.5rem;
   text-align: center;
@@ -114,7 +115,7 @@ section {
 }
 
 
-.popup {
+.amount {
   color: var(--very-pale-orange);
   background: var(--dark-brown);
   position: absolute;
@@ -136,7 +137,7 @@ section {
   cursor: pointer;
 }
 
-.col:hover .popup {
+.col:hover .amount {
   opacity: 1;
   transform: translateY(-8px);
 }
@@ -150,7 +151,7 @@ section {
   justify-content: space-between;
   align-items: flex-end;
   border-top: 1px solid hsla(28, 10%, 53%, 0.7);
-  padding: 1.5rem 0 0.65rem;
+  padding: 1.8rem 0 0.75rem;
 }
 
 .money {
@@ -189,3 +190,8 @@ section {
   .set > div { width: 48px; padding: 8px 0;} .bar{border-radius: 6px;} .logo{ width: 50px; height: 50px;} .logo::after{ width: 46px; height: 46px;} .money {font-size: 2rem;} .bigmoney {font-size: 2.5rem;}}
 @media (min-width: 1440px) { body { font-size:18px;} main { width: 38%; margin:10.5% auto; padding: 0;} section { padding: 2rem 2.5rem; border-radius: 18px;} .header { margin: 1.857rem auto; padding: 1.7rem 2.5rem;}
   .set > div { width: 48px; padding: 8px 0;} .bar{border-radius: 6px;}  .logo{ width: 50px; height: 50px;} .logo::after{ width: 46px; height: 46px;} .money {font-size: 2rem;} .bigmoney {font-size: 2.758rem;}}
+
+
+
+
+/* ----                           2023 © kmichiver                              ----- */

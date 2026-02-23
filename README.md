@@ -8,7 +8,7 @@
 - JQuery 3.7.1
 
 ### Links
-- Live Site URL: [Github Pages](https://kimchiver.github.io/expenses-chart-component-main)
+- [Live URL](https://spectacular-nougat-599b74.netlify.app)
 
 ## Author
 [@kimchiver](https://github.com/kimchiver)
